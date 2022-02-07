@@ -1,10 +1,13 @@
+server:
+  port: 8080
+ 
  eureka:
   instance:
     nonSecurePort: 80
   client:
     serviceUrl:
-      defaultZone: http://www2-optux.herokuapp.com/eureka/
-
+      defaultZone: 'http://www2-optux.herokuapp.com/eureka/'
+ 
 spring:
   application:
     name: gateway-service
@@ -15,3 +18,4 @@ spring:
         uri: lb://KENZAN
         predicates:
         - Path=/employee/**
+ 
