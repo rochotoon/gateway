@@ -8,7 +8,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     healthcheck:
-      enabled: true
+      enabled: false
     serviceUrl:
       defaultZone: 'http://www2-optux.herokuapp.com/eureka/'
  
