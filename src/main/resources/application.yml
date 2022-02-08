@@ -17,5 +17,4 @@ spring:
       - id: employeeModule
         uri: lb://KENZAN
         predicates:
-        - Path=/employee/**
- 
+          - Path=/employee/**
