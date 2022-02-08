@@ -1,10 +1,14 @@
 server:
-  port: 8080
+  port: 8081
  
 eureka:
   instance:
     nonSecurePort: 80
   client:
+    fetch-registry: true
+    register-with-eureka: true
+    healthcheck:
+      enabled: true
     serviceUrl:
       defaultZone: 'http://www2-optux.herokuapp.com/eureka/'
  
@@ -12,10 +16,15 @@ spring:
   application:
     name: gateway-service
   cloud:
+    discovery:
+      enabled: true
     gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
       routes:
       - id: employeeModule
         uri: lb://KENZAN
         predicates:
         - Path=/employee/**
- 
