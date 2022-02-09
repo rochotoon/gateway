@@ -28,3 +28,7 @@ spring:
         uri: https://microservices921.herokuapp.com/
         predicates:
         - Path=/employee/**
+      - id: optuxuiModule
+        uri: https://microservices921.herokuapp.com/
+        predicates:
+        - Path=/#/**
