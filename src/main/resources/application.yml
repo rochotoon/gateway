@@ -25,10 +25,10 @@ spring:
           lower-case-service-id: true
       routes:
       - id: employeeModule
-        uri: https://microservices921.herokuapp.com/
+        uri: lb://KENZAN
         predicates:
         - Path=/employee/**
       - id: optuxuiModule
-        uri: https://microservices921.herokuapp.com
+        uri: lb://KENZAN
         predicates:
         - Path=/#/**
